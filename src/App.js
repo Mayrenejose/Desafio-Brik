@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Beginning }  from './component/Beginning';
-import { Register } from './component/Register';
-import { Users } from "./component/Users";
+import { Beginning }  from './components/Beginning';
+import { Register } from './components/Register';
+import { Users } from "./components/Users";
 
 export const AppRouter = () => {
   
