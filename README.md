@@ -1,10 +1,10 @@
 ## Desafio Brik!
 
-#Login:
-![img](src/Assets/img1.png)
+# Login:
+![img](src/assets/img1.png)
 
-#Registro:
-![img](src/Assets/img2.png)
+# Registro:
+![img](src/assets/img2.png)
 
-#Mostrando data:
-![img](src/Assets/img3.png)
+# Mostrando data:
+![img](src/assets/img3.png)
