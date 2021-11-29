@@ -1,8 +1,7 @@
 {
   "name": "desafio-brik-tmp",
   "version": "0.1.0",
-  "private": true,
-  "homepage":"https://mayrenejose.github.io/Desafio-Brik/",
+  "private": true,  
   "dependencies": {
     "-": "^0.0.1",
     "@testing-library/jest-dom": "^5.15.1",
@@ -20,9 +19,7 @@
     "reactstrap": "^9.0.1",
     "web-vitals": "^1.1.2"
   },
-  "scripts": {
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d build",
+  "scripts": {   
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
