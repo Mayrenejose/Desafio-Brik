@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { postData } from './api';
+import { ButtonBack } from './ButtonBack';
+import { Button } from 'reactstrap';
 
 export const Register = () => {
     const [send, setSend] = useState(false)
@@ -56,8 +58,10 @@ export const Register = () => {
                 {( {errors}) => (                
                 <Form className='formulario'>                   
                     <div>
-                        <label htmlFor="nombres">Nombres</label>
-                        <Field 
+                        <h1>Registro</h1>
+                        <label htmlFor="nombres" className='labelLogin'>Nombres</label><br/>
+                        <Field
+                        className='inputLogin' 
                         type="text" 
                         name="nombres" 
                         id="nombres"                        
@@ -66,24 +70,27 @@ export const Register = () => {
                         
                     </div>
                     <div>
-                        <label htmlFor="apellido_paterno">Apellido Paterno</label>
+                        <label htmlFor="apellido_paterno" className='labelLogin'>Apellido Paterno</label><br/>
                         <Field 
+                        className='inputLogin'
                         type="text" 
                         name="apellido_paterno" 
                         id="apellido_paterno"                         
                         />
                     </div>
                     <div>
-                        <label htmlFor="apellido_materno">Apellido Materno</label>                        
+                        <label htmlFor="apellido_materno" className='labelLogin'>Apellido Materno</label><br/>                        
                         <Field 
+                        className='inputLogin'
                         type="text" 
                         name="apellido_materno" 
                         id="apellido_materno"                        
                         />
                     </div>
                     <div>
-                        <label htmlFor="rut">Rut</label>
+                        <label htmlFor="rut"className='labelLogin'>Rut</label><br/>
                         <Field 
+                        className='inputLogin'
                         type='text' 
                         name="rut" 
                         id="rut"                        
@@ -91,8 +98,9 @@ export const Register = () => {
                         <ErrorMessage name='rut' component={() => (<p className='errors'>{errors.rut}</p>)}/>
                     </div>
                     <div>
-                        <label htmlFor="email">E-mail</label>
+                        <label htmlFor="email" className='labelLogin'>E-mail</label><br/>
                         <Field 
+                        className='inputLogin'
                         type="email" 
                         name="email" 
                         id="email"  
@@ -100,34 +108,41 @@ export const Register = () => {
                         <ErrorMessage name='email' component={() => (<p className='errors'>{errors.email}</p>)}/>
                     </div>
                     <div>
-                        <label htmlFor="name">Nombre de Usuario</label>
+                        <label htmlFor="name" className='labelLogin'>Nombre de Usuario</label><br/>
                         <Field 
+                        className='inputLogin'
                         type="text" 
                         name="name" 
                         id="name" 
                         />
                     </div>
                     <div>
-                        <label htmlFor="password">Contraseña</label>
+                        <label htmlFor="password" className='labelLogin'>Contraseña</label><br/>
                         <Field 
+                        className='inputLogin'
                         type="password" 
                         name="password" 
                         id="password" 
                         />                        
                     </div>
                     <div>
-                        <label htmlFor="password_confirmation">Confirma tu Contraseña</label>
+                        <label htmlFor="password_confirmation" className='labelLogin'>Confirma tu Contraseña</label><br/>
                         <Field 
+                        className='inputLogin'
                         type="password" 
                         name="password_confirmation" 
                         id="password_confirmation" 
                         />                        
                     </div>
-                    <button type="submit">Enviar</button>
+                    <br/>
+                    <Button type="submit" color="light" outline size="lg" className='buttonLogin'>Enviar</Button><br/>
+                    <br/>
+                    <ButtonBack />
                     { send && <p className='send'>Formulario enviado con exito</p>}
                 </Form>
                 )}
             </Formik>
+            
         </>
     )
 }
